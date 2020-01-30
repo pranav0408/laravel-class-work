@@ -11,9 +11,9 @@ class PostCon extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index($id)
     {
-        //
+        return "<h3>Welcome <br> The data passed to controller is </h3><h4>$id</h4>";
     }
 
     /**
@@ -45,7 +45,18 @@ class PostCon extends Controller
      */
     public function show($id)
     {
-        //
+        $data=[ 
+            'first-post' => ' lorem ipsum doler sit as First Post ',
+            'second-post'=> ' aler ip fera code as Second Post '
+        ];
+        if ( array_key_exists($id,$data) ){ 
+            return view('test',['name'=>$data[$id]]);
+            // return view('post')->with('id',$id);
+            // return view('post',compact('id'));
+        }
+        else{
+            return redirect('/');
+        }
     }
 
     /**
@@ -80,5 +91,10 @@ class PostCon extends Controller
     public function destroy($id)
     {
         //
+    }
+
+    public function dataFromView(Request $req){
+        $data = $req->input('data');
+        return view('data')->with('data',$data);
     }
 }

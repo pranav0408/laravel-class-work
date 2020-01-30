@@ -57,12 +57,25 @@ Route::get('/', function () {
 // });
 
 // named route
-Route::get('/admin/post/11705530',array(
-    'as'=>'admin.home', function () {
-        $url=route('admin.home'); //named route
-        return 'This url route is '.$url;
-}));
+// Route::get('/admin/post/11705530',array(
+//     'as'=>'admin.home', function () {
+//         $url=route('admin.home'); //named route
+//         return 'This url route is '.$url;
+// }));
 
-Route::get('/admin',function () {
-    return redirect()->route('admin.home');
+// Route::get('/admin',function () {
+//     return redirect()->route('admin.home');
+// });
+
+
+// Controller
+// Route::get('/con/{id}','PostCon@index');
+// Route::get('/con/{id}','PostCon@show');
+// Route::resource('post','PostCon'); //named route using controller
+// Route::resource('con','PostCon'); //named route using controller
+
+// Data from view
+Route::get('/view',function() {
+    return view('data');
 });
+Route::post('/view','PostCon@dataFromView');
