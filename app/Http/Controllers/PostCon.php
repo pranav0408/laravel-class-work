@@ -95,6 +95,26 @@ class PostCon extends Controller
 
     public function dataFromView(Request $req){
         $data = $req->input('data');
-        return view('data')->with('data',$data);
+        // return view('data')->with('data',$data);
+        return view('home',['data'=>$data,'title'=>'Form','form'=>true]);
+    }
+    public function navigate($nav){
+        $nav_title = [
+            'home' => 'Home',
+            'about' => 'About',
+            'contact' => 'Contact Us',
+        ];
+        if( $nav == 'view' ){
+            return view('home',['title'=>'Form','form'=>true]);
+        }
+        else{
+            if( array_key_exists($nav,$nav_title) ){
+                return view('home',['title'=>$nav_title[$nav]]);
+            }
+            else{
+                return redirect('/nav/home');
+            }
+        }
+
     }
 }

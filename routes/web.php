@@ -75,7 +75,11 @@ Route::get('/', function () {
 // Route::resource('con','PostCon'); //named route using controller
 
 // Data from view
-Route::get('/view',function() {
-    return view('data');
-});
-Route::post('/view','PostCon@dataFromView');
+// Route::get('/view',function() {
+//     return view('data');
+// });
+// Route::post('/view','PostCon@dataFromView');
+
+// navigation
+Route::get('/nav/{nav}','PostCon@navigate');
+Route::post('/nav/view','PostCon@dataFromView');
