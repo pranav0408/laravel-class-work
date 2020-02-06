@@ -1,0 +1,2 @@
+Global Middleware - runs on every HTTP requests 
+Route Middleware - will be assigned to specific route 

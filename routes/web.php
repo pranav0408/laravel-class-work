@@ -71,8 +71,8 @@ Route::get('/', function () {
 // Controller
 // Route::get('/con/{id}','PostCon@index');
 // Route::get('/con/{id}','PostCon@show');
-// Route::resource('post','PostCon'); //named route using controller
-// Route::resource('con','PostCon'); //named route using controller
+// Route::resource('post','PostCon'); //named route using resource controller
+// Route::resource('con','PostCon'); //named route using resource controller
 
 // Data from view
 // Route::get('/view',function() {
@@ -83,3 +83,18 @@ Route::get('/', function () {
 // navigation
 Route::get('/nav/{nav}','PostCon@navigate');
 Route::post('/nav/view','PostCon@dataFromView');
+
+// Invoke Controller
+// Route::get('/invoke/{id}','InvokeCon');
+
+// Middleware
+// Route::get('role/{id}',[
+//     'middleware' => 'role:editor',
+//     'uses' => 'TestCon@index'
+// ]);
+
+// One Controller and Two Middlewares
+Route::get('usercon',[
+    'middleware' => 'fm',
+    'uses' => 'UserCon@showPath'
+]);
