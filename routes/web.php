@@ -98,3 +98,8 @@ Route::get('usercon',[
     'middleware' => 'fm',
     'uses' => 'UserCon@showPath'
 ]);
+
+// parent and child
+Route::get('/child',function() {
+    return view('child');
+});
