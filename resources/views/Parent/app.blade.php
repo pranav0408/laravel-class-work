@@ -17,15 +17,26 @@
                 font-size: 30px;
                 margin: 50px;
             }
+            .sidebar p{
+                font-size: 24px;
+            }
+
+            @media only screen and (max-width: 1024px){
+                .sidebar{
+                    float: none;
+                    margin: 20px;
+                }
+                .container{
+                    margin: 50px;
+                }
+            }
 
         </style>
 
     </head>
     <body>
         @section('sidebar')
-            <div class="sidebar">
-                This is the master sidebar
-            </div>
+            This is the master sidebar
         @show
 
         <div class="container">

@@ -3,9 +3,12 @@
 @section('title','My Title')
 
 @section('sidebar')
-    @parent
+    <div class="sidebar">
+        @parent
+        
+        <p>This data is appended from child into parent</p>
+    </div>
 
-    <p>This data is appended from child into parent</p>
 @endsection
 
 @section('content')

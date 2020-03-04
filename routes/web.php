@@ -81,8 +81,8 @@ Route::get('/', function () {
 // Route::post('/view','PostCon@dataFromView');
 
 // navigation
-Route::get('/nav/{nav}','PostCon@navigate');
-Route::post('/nav/view','PostCon@dataFromView');
+// Route::get('/nav/{nav}','PostCon@navigate');
+// Route::post('/nav/view','PostCon@dataFromView');
 
 // Invoke Controller
 // Route::get('/invoke/{id}','InvokeCon');
@@ -94,12 +94,30 @@ Route::post('/nav/view','PostCon@dataFromView');
 // ]);
 
 // One Controller and Two Middlewares
-Route::get('usercon',[
-    'middleware' => 'fm',
-    'uses' => 'UserCon@showPath'
-]);
+// Route::get('usercon',[
+//     'middleware' => 'fm',
+//     'uses' => 'UserCon@showPath'
+// ]);
 
 // parent and child
-Route::get('/child',function() {
-    return view('child');
-});
+// Route::get('/child',function() {
+//     return view('child');
+// });
+
+// view from controller
+// Route::get('/ctrlStr','ControlStructure@index');
+
+// find grade using switch case
+// Route::get('/grade/{value}',function($value) {
+//     return view('grade',['check'=>$value]);
+// });
+
+// loop
+// Route::get('/loop',function() {
+//     $record = ["Lorem","Ipsum","Doler","Sit"];
+//     return view('loop',["records"=>$record]);
+// });
+
+// form
+Route::View('/form','form');
+ROute::post('/form','FormHandle@index');
