@@ -21,8 +21,8 @@ class FormHandle extends Controller
         $req->validate([
             "fname"=>"required",
             "lname"=>"required",
-            "email"=>"required",
-            "mobile"=>"required | size:10",
+            "email"=>"required | email | unique:users",
+            "mobile"=>"required | size:10 | numeric",
             "pass"=>"required | min:5 | max:10",
             "cpass"=>"required | min:5 | max:10 | same:pass",
             "details"=>"required"

@@ -4,6 +4,9 @@
 *{
     font-weight: bold;
 }
+    h2{
+        text-align: center;
+    }
     input{
         padding: 10px;
         width: 40vw;
@@ -67,14 +70,14 @@
         <tr>
             <td>
                 <div id="fname">
-                    Name: <br>
-                    <input type="text" name="fname">
+                    First Name: <br>
+                    <input type="text" name="fname" placeholder="Enter First Name">
                 </div>
             </td>
             <td>
                 <div id="lname">
-                    Name: <br>
-                    <input type="text" name="lname">
+                    Last Name: <br>
+                    <input type="text" name="lname" placeholder="Enter Last Name">
                 </div>
             </td>
         </tr>
@@ -82,13 +85,13 @@
             <td>
                 <div id="pass">
                     Email: <br>
-                    <input type="email" name="email">
+                    <input type="email" name="email" placeholder="Enter Email">
                 </div>        
             </td>
             <td>
                 <div id="cpass">
                     Mobile Number: <br>
-                    <input type="text" name="mobile">
+                    <input type="text" name="mobile" placeholder="Enter Mobile Number">
                 </div>        
             </td>
         </tr>
@@ -96,13 +99,13 @@
             <td>
                 <div id="pass">
                     Password: <br>
-                    <input type="password" name="pass">
+                    <input type="password" name="pass" placeholder="Enter Password">
                 </div>
             </td>
             <td>
                 <div id="cpass">
                     Confirm Password: <br>
-                    <input type="password" name="cpass">
+                    <input type="password" name="cpass" placeholder="Re-Enter Password">
                 </div>        
             </td>
         </tr>
