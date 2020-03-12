@@ -22,20 +22,22 @@
     textarea{
         margin-left: 8vw;
         width: 84vw;
-        margin-bottom: 20px;
+        margin-bottom: 60px;
         padding: 20px;
     }
     button{
+        width: 100px;
+        height: 50px;
         padding: 10px 20px;
         background: #52af32;
         color: rgba(255,255,255,0.8);
-        border: none;
         cursor: pointer;
         border: 1px solid #ccc; 
         outline: none;
+        transition: all 0.5s ease;
     }
-    button:active{
-        box-shadow: 3px 3px 10px 1px inset rgba(0,0,0,0.5), -3px -3px 10px 0.5px inset rgba(255,255,255,0.7) ;
+    button:hover{
+        transform: translate(-8px,-8px);
     }
     .err{
         margin: 5px;

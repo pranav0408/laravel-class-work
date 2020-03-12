@@ -3,10 +3,13 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Http\Requests\validateFormPost;
 
 class FormHandle extends Controller
 {
-    public function index(Request $req ){
+    public function index( /*Request $req*/ validateFormPost $req ){
+        
+        return back()->withInput();
         
         $fname = $req->input("fname");
         $lname = $req->input("lname");
@@ -18,15 +21,6 @@ class FormHandle extends Controller
         $token = $req->input("_token");
         // print_r( $req->input() );
 
-        $req->validate([
-            "fname"=>"required",
-            "lname"=>"required",
-            "email"=>"required | email | unique:users",
-            "mobile"=>"required | size:10 | numeric",
-            "pass"=>"required | min:5 | max:10",
-            "cpass"=>"required | min:5 | max:10 | same:pass",
-            "details"=>"required"
-        ]);
 
         return view("form", [
                                 "token"=>$token,

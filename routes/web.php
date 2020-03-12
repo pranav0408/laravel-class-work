@@ -119,5 +119,27 @@ Route::get('/', function () {
 // });
 
 // form
-Route::View('/form','form');
-ROute::post('/form','FormHandle@index');
+// Route::View('/form','form');
+// ROute::post('/form','FormHandle@index');
+
+// ************** Raw queries *****************
+// // db select data
+// Route::get('/db/select','dbCheck@dbCheck');
+// // db insert data
+// Route::get('/db/insert','dbCheck@dbInsert');
+// // db update data
+// Route::get('/db/update','dbCheck@dbUpdate');
+// // db delete data
+// Route::get('/db/delete','dbCheck@dbDelete');
+
+// **************** Laravel queries *******************
+// db new functions
+Route::get('/db2/create','dbCheck2@create');
+// db get 
+Route::get('/db2/get','dbCheck2@get');
+// db first 
+Route::get('/db2/first','dbCheck2@first');
+// db where 
+Route::get('/db2/where','dbCheck2@where');
+// db pluck 
+Route::get('/db2/pluck','dbCheck2@pluck');
