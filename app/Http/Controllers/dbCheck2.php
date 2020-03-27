@@ -43,4 +43,20 @@ class dbCheck2 extends Controller
         }
         // dd($users);
     }
+
+    public function find(){
+        // the row value with the specific value of `id` column
+        $users=DB::table('users')->find('1');
+        dd($users);
+    }
+
+    public function insert(){
+        $users=DB::table('users')->insert([
+            'id'=>2,
+            'name'=>'zeus',
+            'email'=>'zeus@local.com',
+            'pass'=>'local1'
+        ]);
+        dd($users);
+    }
 }

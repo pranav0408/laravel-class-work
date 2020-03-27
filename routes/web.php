@@ -143,3 +143,7 @@ Route::get('/db2/first','dbCheck2@first');
 Route::get('/db2/where','dbCheck2@where');
 // db pluck 
 Route::get('/db2/pluck','dbCheck2@pluck');
+// db find 
+Route::get('/db2/find','dbCheck2@find');
+// db insert 
+Route::get('/db2/insert','dbCheck2@insert');
